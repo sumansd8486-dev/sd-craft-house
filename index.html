@@ -6,103 +6,141 @@
 
 <title>SD Craft House | Handmade & Personalized Frames</title>
 
+<meta name="description" content="SD Craft House - Handmade, personalized and premium 3D frames made with creativity and love.">
+
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
+  font-family:Arial, Helvetica, sans-serif;
   background:#faf9f6;
   color:#171717;
+  line-height:1.6;
 }
 
+a{
+  text-decoration:none;
+}
+
+.container{
+  width:90%;
+  max-width:1150px;
+  margin:auto;
+}
+
+/* HEADER */
+
 header{
-  padding:20px 7%;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(17,17,17,.96);
+  padding:16px 0;
+}
+
+.nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:#111;
-  color:white;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:800;
-  letter-spacing:1px;
+  color:#fff;
+  font-size:21px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+
+.logo span{
+  color:#d8b66b;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
+  color:#fff;
+  margin-left:22px;
   font-size:14px;
 }
 
+/* HERO */
+
 .hero{
-  min-height:78vh;
+  min-height:88vh;
   display:flex;
   align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:60px 20px;
-  background:linear-gradient(135deg,#111,#292929);
-  color:white;
+  background:
+  radial-gradient(circle at top,#3a3a3a,#111 60%);
+  color:#fff;
+  padding:70px 20px;
 }
 
 .hero-content{
-  max-width:750px;
+  max-width:850px;
+  margin:auto;
 }
 
 .badge{
   display:inline-block;
+  padding:8px 17px;
   border:1px solid #777;
-  padding:8px 16px;
-  border-radius:30px;
-  font-size:13px;
-  margin-bottom:22px;
+  border-radius:50px;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:25px;
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,78px);
+  font-size:clamp(45px,9vw,82px);
   line-height:1;
-  margin-bottom:22px;
+  margin-bottom:25px;
 }
 
-.hero h1 span{
-  color:#d6b36a;
+.gold{
+  color:#d8b66b;
 }
 
 .hero p{
+  max-width:650px;
+  margin:0 auto 32px;
+  color:#d7d7d7;
   font-size:18px;
-  line-height:1.6;
-  color:#ddd;
-  margin-bottom:32px;
 }
 
 .btn{
   display:inline-block;
-  padding:15px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
+  padding:14px 25px;
+  border-radius:50px;
   margin:5px;
+  font-weight:bold;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
 }
 
 .primary{
-  background:#d6b36a;
+  background:#d8b66b;
   color:#111;
 }
 
-.secondary{
+.outline{
   border:1px solid #777;
-  color:white;
+  color:#fff;
 }
 
+/* SECTION */
+
 section{
-  padding:75px 7%;
+  padding:80px 0;
 }
 
 .section-title{
@@ -112,139 +150,333 @@ section{
 
 .section-title h2{
   font-size:38px;
-  margin-bottom:10px;
+  margin-bottom:8px;
 }
 
 .section-title p{
   color:#777;
 }
 
+/* FEATURES */
+
 .features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.card{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  box-shadow:0 8px 30px rgba(0,0,0,.07);
-}
-
-.card .icon{
-  font-size:35px;
-  margin-bottom:15px;
-}
-
-.card h3{
-  margin-bottom:10px;
-}
-
-.card p{
-  color:#777;
-  line-height:1.5;
-}
-
-.showcase{
-  background:#111;
-  color:white;
-}
-
-.products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:22px;
 }
 
+.feature{
+  background:#fff;
+  padding:32px 25px;
+  text-align:center;
+  border-radius:22px;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.feature-icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
+
+.feature h3{
+  margin-bottom:10px;
+}
+
+.feature p{
+  color:#777;
+  font-size:14px;
+}
+
+/* PRODUCTS */
+
+.products-section{
+  background:#111;
+  color:#fff;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
 .product{
-  background:#1d1d1d;
-  border-radius:20px;
+  min-height:250px;
   padding:28px;
-  min-height:230px;
+  border-radius:22px;
+  background:linear-gradient(145deg,#292929,#171717);
+  border:1px solid #333;
   display:flex;
   flex-direction:column;
   justify-content:flex-end;
 }
 
+.product-number{
+  color:#d8b66b;
+  font-size:13px;
+  margin-bottom:8px;
+  letter-spacing:2px;
+}
+
 .product h3{
-  font-size:23px;
+  font-size:25px;
   margin-bottom:8px;
 }
 
 .product p{
   color:#bbb;
+  font-size:14px;
 }
 
-.custom{
+/* PROCESS */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.step{
   text-align:center;
-  background:#eee8dc;
+  padding:25px 15px;
+}
+
+.step-number{
+  width:50px;
+  height:50px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:#171717;
+  color:#d8b66b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+.step h3{
+  margin-bottom:7px;
+}
+
+.step p{
+  color:#777;
+  font-size:13px;
+}
+
+/* CUSTOM */
+
+.custom{
+  background:#eee7d9;
+  text-align:center;
 }
 
 .custom h2{
-  font-size:40px;
-  margin-bottom:15px;
+  font-size:42px;
+  margin-bottom:12px;
 }
 
 .custom p{
-  max-width:600px;
-  margin:0 auto 28px;
-  line-height:1.6;
+  max-width:650px;
+  margin:0 auto 25px;
   color:#555;
 }
+
+/* COD */
+
+.cod{
+  background:#fff;
+}
+
+.cod-box{
+  max-width:800px;
+  margin:auto;
+  background:#171717;
+  color:#fff;
+  padding:40px 30px;
+  border-radius:25px;
+  text-align:center;
+}
+
+.cod-box h2{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.cod-box p{
+  color:#ccc;
+  margin-bottom:22px;
+}
+
+.cod-points{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-bottom:25px;
+}
+
+.cod-points span{
+  border:1px solid #555;
+  padding:9px 15px;
+  border-radius:30px;
+  font-size:13px;
+}
+
+/* SOCIAL */
 
 .social{
   text-align:center;
 }
 
 .social-buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
   margin-top:25px;
 }
 
-.social-buttons a{
-  display:inline-block;
-  padding:13px 22px;
-  border-radius:30px;
-  margin:5px;
-  text-decoration:none;
-  border:1px solid #ccc;
+.social-btn{
+  padding:13px 23px;
+  border-radius:50px;
+  background:#fff;
+  border:1px solid #ddd;
   color:#111;
-  background:white;
+  font-weight:bold;
 }
 
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:30px 20px;
+/* REVIEWS */
+
+.reviews{
+  background:#f0eee9;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.review{
+  background:#fff;
+  padding:28px;
+  border-radius:20px;
+}
+
+.stars{
+  margin-bottom:12px;
+  letter-spacing:2px;
+}
+
+.review p{
+  color:#555;
   font-size:14px;
 }
 
-footer strong{
-  color:white;
+.review strong{
+  display:block;
+  margin-top:15px;
 }
 
-@media(max-width:700px){
+/* CONTACT */
+
+.contact{
+  background:#111;
+  color:#fff;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.contact p{
+  color:#bbb;
+  margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#090909;
+  color:#777;
+  text-align:center;
+  padding:35px 20px;
+  font-size:13px;
+}
+
+footer strong{
+  color:#fff;
+  font-size:18px;
+}
+
+.footer-social{
+  margin-top:15px;
+}
+
+.footer-social a{
+  color:#d8b66b;
+  margin:0 8px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:2000;
+  background:#25d366;
+  color:#fff;
+  padding:14px 19px;
+  border-radius:50px;
+  font-weight:bold;
+  box-shadow:0 5px 20px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
   nav{
     display:none;
   }
 
   .features,
-  .products{
+  .products,
+  .review-grid{
     grid-template-columns:1fr;
   }
 
+  .process{
+    grid-template-columns:repeat(2,1fr);
+  }
+
   section{
-    padding:55px 6%;
+    padding:60px 0;
   }
 
   .hero{
-    min-height:75vh;
+    min-height:82vh;
   }
 
   .hero p{
     font-size:16px;
+  }
+
+  .section-title h2{
+    font-size:31px;
+  }
+
+  .custom h2,
+  .contact h2{
+    font-size:34px;
+  }
+
+  .whatsapp{
+    right:12px;
+    bottom:12px;
   }
 }
 </style>
@@ -253,81 +485,413 @@ footer strong{
 <body>
 
 <header>
-  <div class="logo">SD CRAFT HOUSE</div>
+  <div class="container nav">
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#frames">Frames</a>
-    <a href="#custom">Custom</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="logo">
+      SD <span>CRAFT HOUSE</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Frames</a>
+      <a href="#custom">Custom</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+
   <div class="hero-content">
 
-    <div class="badge">HANDMADE • PERSONALIZED • PREMIUM</div>
+    <div class="badge">
+      HANDMADE • PERSONALIZED • PREMIUM
+    </div>
 
-    <h1>Memories<br>Made <span>Forever.</span></h1>
+    <h1>
+      Memories<br>
+      Made <span class="gold">Forever.</span>
+    </h1>
 
     <p>
-      Beautiful handmade and personalized frames,
-      crafted with creativity, detail and love.
+      We turn your favourite memories, people and special moments
+      into beautiful handmade 3D frames.
     </p>
 
-    <a class="btn primary" href="#frames">Explore Frames</a>
+    <a class="btn primary" href="#products">
+      Explore Frames
+    </a>
 
-    <a class="btn secondary"
-       href="https://wa.me/918486265984">
-       Order on WhatsApp
+    <a class="btn outline"
+       href="https://wa.me/917002724292">
+      Order on WhatsApp
     </a>
 
   </div>
+
 </section>
 
+
+<!-- WHY US -->
 
 <section>
-  <div class="section-title">
-    <h2>Why SD Craft House?</h2>
-    <p>Every frame is made to make your memories special.</p>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Why SD Craft House?</h2>
+      <p>Made by hand. Designed with emotion.</p>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">✦</div>
+        <h3>Handcrafted</h3>
+        <p>
+          Every frame is carefully designed and handmade
+          with attention to detail.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">♡</div>
+        <h3>Personalized</h3>
+        <p>
+          Your photos, your idea and your story become
+          part of the design.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">◇</div>
+        <h3>Premium Finish</h3>
+        <p>
+          Creative 3D layers and premium finishing
+          for a memorable presentation.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="features">
-
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Handcrafted</h3>
-      <p>
-        Every piece is carefully designed and handmade
-        with attention to detail.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">♡</div>
-      <h3>Personalized</h3>
-      <p>
-        Create a frame around your special person,
-        memory or occasion.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">◇</div>
-      <h3>Premium Finish</h3>
-      <p>
-        Creative 3D designs with a clean and premium
-        presentation.
-      </p>
-    </div>
-
-  </div>
 </section>
 
 
-<section class="showcase" id="frames">
+<!-- PRODUCTS -->
 
-  <div class="section-title">
-    <h2>Our Creations</h2>
-    <
+<section class="products-section" id="products">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Creations</h2>
+      <p>Explore our handmade frame collections.</p>
+    </div>
+
+    <div class="products">
+
+      <div class="product">
+        <div class="product-number">01 — COLLECTION</div>
+        <h3>Celebrity Frames</h3>
+        <p>
+          Tribute and achievement frames made for
+          your favourite icons.
+        </p>
+      </div>
+
+      <div class="product">
+        <div class="product-number">02 — COLLECTION</div>
+        <h3>Birthday Frames</h3>
+        <p>
+          Turn a birthday memory into a beautiful
+          personalized gift.
+        </p>
+      </div>
+
+      <div class="product">
+        <div class="product-number">03 — COLLECTION</div>
+        <h3>Couple & Love Frames</h3>
+        <p>
+          A meaningful handmade gift for someone special.
+        </p>
+      </div>
+
+      <div class="product">
+        <div class="product-number">04 — COLLECTION</div>
+        <h3>Custom 3D Frames</h3>
+        <p>
+          Have an idea? We create a frame specially
+          around your concept.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>How We Create</h2>
+      <p>From your idea to the final handmade frame.</p>
+    </div>
+
+    <div class="process">
+
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Your Idea</h3>
+        <p>Send us your photos and concept.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Design</h3>
+        <p>We create the design around your idea.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Handcraft</h3>
+        <p>Each layer is carefully cut and assembled.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Finish</h3>
+        <p>Your personalized frame is prepared for delivery.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CUSTOM ORDER -->
+
+<section class="custom" id="custom">
+
+  <div class="container">
+
+    <h2>Have an Idea?</h2>
+
+    <p>
+      Send us your photo, occasion or idea.
+      We will turn your imagination into a unique handmade frame.
+    </p>
+
+    <a class="btn primary"
+       href="https://wa.me/917002724292">
+      Start Custom Order
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- COD -->
+
+<section class="cod">
+
+  <div class="container">
+
+    <div class="cod-box">
+
+      <h2>Cash on Delivery</h2>
+
+      <p>
+        COD is available for selected orders.
+        Additional COD charges may apply.
+      </p>
+
+      <div class="cod-points">
+        <span>✓ Safe Packaging</span>
+        <span>✓ Handle With Care</span>
+        <span>✓ Delivery Available</span>
+      </div>
+
+      <a class="btn primary"
+         href="https://wa.me/917002724292">
+        Ask About COD
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section class="social">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Follow Our Work</h2>
+      <p>
+        See our latest handmade creations on Instagram.
+      </p>
+    </div>
+
+    <div class="social-buttons">
+
+      <a class="social-btn"
+         href="https://www.instagram.com/ig_suman_sd/"
+         target="_blank">
+        📸 Instagram
+      </a>
+
+      <a class="social-btn"
+         href="https://www.youtube.com/"
+         target="_blank">
+        ▶ YouTube
+      </a>
+
+      <a class="social-btn"
+         href="https://www.facebook.com/"
+         target="_blank">
+        Facebook
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>What Customers Say</h2>
+      <p>Your memories deserve something special.</p>
+    </div>
+
+    <div class="review-grid">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Beautiful handmade work and very unique design.
+        </p>
+        <strong>Happy Customer</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          The personalized frame made the gift
+          really special.
+        </p>
+        <strong>Happy Customer</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Creative finishing and a memorable product.
+        </p>
+        <strong>Happy Customer</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <h2>Let's Create Something Special</h2>
+
+    <p>
+      Have a custom idea? Contact SD Craft House today.
+    </p>
+
+    <a class="btn primary"
+       href="https://wa.me/917002724292">
+      WhatsApp Us
+    </a>
+
+    <a class="btn outline"
+       href="https://www.instagram.com/ig_suman_sd/"
+       target="_blank">
+      Instagram
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <strong>SD CRAFT HOUSE</strong>
+
+  <p>
+    Handmade • Personalized • Made With Love
+  </p>
+
+  <div class="footer-social">
+
+    <a href="https://www.instagram.com/ig_suman_sd/"
+       target="_blank">
+      Instagram
+    </a>
+
+    <a href="https://wa.me/917002724292">
+      WhatsApp
+    </a>
+
+    <a href="https://www.youtube.com/"
+       target="_blank">
+      YouTube
+    </a>
+
+  </div>
+
+  <br>
+
+  © 2026 SD Craft House. All rights reserved.
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp"
+   href="https://wa.me/918486265984">
+   WhatsApp
+</a>
+
+</body>
+</html>
